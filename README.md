@@ -5,5 +5,7 @@ Steve is a recent finance graduate that received his first job from his parents 
 
 Overall, the purpose of the analysis assignment is to refactor VBA code to help Steve review data of the the green energy stock market for 2017 and 2018 more efficently.  
 ## Results
+### Original Images
+![2017 Green Stocks](![GreenStocks 2017](https://github.com/Jall3n/All-Stocks-Analysis/assets/119149740/8b866b24-30be-435d-8791-e0b8f3fa63df)
 
 ## Summary
