@@ -11,7 +11,8 @@ Overall, the purpose of the analysis assignment is to refactor VBA code to help 
 
 ![GreenStocks 2018](https://github.com/Jall3n/All-Stocks-Analysis/assets/119149740/f4184da0-b0a6-40ac-8f62-395ae29068c8) ![GreenStocks 2018 Seconds](https://github.com/Jall3n/All-Stocks-Analysis/assets/119149740/8e6fcf29-8641-4e9b-bc80-5398782ceb6e)
 
-### Original Code
+The original/starter code ran for 2017 in 0.2470093 seconds and ran for 2018 in 0.2440186 seconds. One of the differences between the code and the Module 2 activity was activiating both 2017 and 2018 worksheets instead of just 2018. The solution for this came for the activities starter code Worksheets(yearValue).Activate which activates and loops through the two worksheets. 
+
       Sub AllStocksAnalysis()
 
       '1) Format the output sheet on All Stocks Analysis worksheet
