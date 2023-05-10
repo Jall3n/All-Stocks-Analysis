@@ -198,7 +198,9 @@ Overall, the purpose of the analysis assignment is to refactor VBA code to help 
     End Sub
 
 ### Refactored Image
-<img width="243" alt="Refactored All Stocks 2017" src="https://github.com/Jall3n/All-Stocks-Analysis/assets/119149740/3b4788d6-36b1-40a4-9496-1a38564a7e53">  <img width="252" alt="Refactored All Stocks 2018" src="https://github.com/Jall3n/All-Stocks-Analysis/assets/119149740/18e13bf9-25d9-490d-bd9a-868b7cfe86d3">
+<img width="265" alt="VBA Refactored 2017 Seconds" src="https://github.com/Jall3n/All-Stocks-Analysis/assets/119149740/eb0984f3-b041-430c-b760-b356912753bc">  <img width="260" alt="VBA Refactored 2018 Seconds" src="https://github.com/Jall3n/All-Stocks-Analysis/assets/119149740/1c696f60-2bb3-4cab-a9dd-a6c666317dd3">
+
+
 
 
 
