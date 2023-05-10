@@ -1,7 +1,9 @@
 # All-Stocks-Analysis
 VBA Challenge Module 2
 ## Overview of Project
-The purpose of the analysis assignment is to refactor VBA code to help Steve review data of the stock market for 2017 and 2018 more efficently. 
+Steve is a recent finance graduate that received his first job from his parents who are passionate about green energy and want to invest in it. After reviewing his parent's initial investment, in DAQO New Energy Corporation, Steve wants to diversivy his parents stock portfolio. So, Steve asked for our assistance to analyze the stock data using Visual Basic for Applications (VBA) in Excel 
+
+Overall, the purpose of the analysis assignment is to refactor VBA code to help Steve review data of the the green energy stock market for 2017 and 2018 more efficently.  
 ## Results
 
 ## Summary
