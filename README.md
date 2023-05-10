@@ -212,6 +212,7 @@ For the challenge we needed to update the code to run more efficiently. I also c
           End Sub
 
 ### Refactored Image
+The results of the refactored code show that it is faster than the original/starter code which was 0.07421875 seconds for 2017 and 0.0703125 seconds for 2018.
 <img width="265" alt="VBA Refactored 2017 Seconds" src="https://github.com/Jall3n/All-Stocks-Analysis/assets/119149740/eb0984f3-b041-430c-b760-b356912753bc">  <img width="260" alt="VBA Refactored 2018 Seconds" src="https://github.com/Jall3n/All-Stocks-Analysis/assets/119149740/1c696f60-2bb3-4cab-a9dd-a6c666317dd3">
 
 
