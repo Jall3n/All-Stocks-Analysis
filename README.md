@@ -5,13 +5,15 @@ Steve is a recent finance graduate that received his first job from his parents 
 
 Overall, the purpose of the analysis assignment is to refactor VBA code to help Steve review data of the the green energy stock market for 2017 and 2018 more efficently.  
 ## Results
-### Original Images
+### Original/Starter Images
 ![GreenStocks 2017](https://github.com/Jall3n/All-Stocks-Analysis/assets/119149740/8b866b24-30be-435d-8791-e0b8f3fa63df) ![GreenStocks 2017 Seconds](https://github.com/Jall3n/All-Stocks-Analysis/assets/119149740/2daa5678-5383-40b1-a2cd-4031d371ff84)
 
 
 ![GreenStocks 2018](https://github.com/Jall3n/All-Stocks-Analysis/assets/119149740/f4184da0-b0a6-40ac-8f62-395ae29068c8) ![GreenStocks 2018 Seconds](https://github.com/Jall3n/All-Stocks-Analysis/assets/119149740/8e6fcf29-8641-4e9b-bc80-5398782ceb6e)
 
 The original/starter code ran for 2017 in 0.2470093 seconds and ran for 2018 in 0.2440186 seconds. One of the differences between the code and the Module 2 activity was activiating both 2017 and 2018 worksheets instead of just 2018. The solution for this came for the activities starter code Worksheets(yearValue).Activate which activates and loops through the two worksheets. 
+
+### Original/Starter Code
 
       Sub AllStocksAnalysis()
 
@@ -84,6 +86,8 @@ The original/starter code ran for 2017 in 0.2470093 seconds and ran for 2018 in 
       End Sub
 
 ### Refactored Code
+
+
     Sub useAllStocksAnalysisRefactored()
     Dim startTime As Single
     Dim endTime  As Single
