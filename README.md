@@ -4,7 +4,6 @@ VBA Challenge Module 2
 Steve is a recent finance graduate that received his first job from his parents who are passionate about green energy and want to invest in it. After reviewing his parent's initial investment, in DAQO New Energy Corporation, Steve wants to diversivy his parents stock portfolio. So, Steve asked for our assistance to analyze the stock data using Visual Basic for Applications (VBA) in Excel 
 
 Overall, the purpose of the analysis assignment is to refactor VBA code to help Steve review data of the the green energy stock market for 2017 and 2018 more efficently. 
-
 ## Results
 ### Original/Starter Images
 ![GreenStocks 2017](https://github.com/Jall3n/All-Stocks-Analysis/assets/119149740/8b866b24-30be-435d-8791-e0b8f3fa63df) ![GreenStocks 2017 Seconds](https://github.com/Jall3n/All-Stocks-Analysis/assets/119149740/2daa5678-5383-40b1-a2cd-4031d371ff84)
@@ -210,16 +209,10 @@ For the challenge we needed to update the code to run more efficiently. I also c
           MsgBox "This code ran in " & (endTime - startTime) & " seconds for the year " & (yearValue)
 
           End Sub
-
 ### Refactored Image
 The results of the refactored code show that it is faster than the original/starter code which was 0.07421875 seconds for 2017 and 0.0703125 seconds for 2018. 
 
 <img width="265" alt="VBA Refactored 2017 Seconds" src="https://github.com/Jall3n/All-Stocks-Analysis/assets/119149740/eb0984f3-b041-430c-b760-b356912753bc">  <img width="260" alt="VBA Refactored 2018 Seconds" src="https://github.com/Jall3n/All-Stocks-Analysis/assets/119149740/1c696f60-2bb3-4cab-a9dd-a6c666317dd3">
-
-
-
-
-
 
 ## Summary
 ### Advantages and Disadvantages of Refactoring Code in General
