@@ -82,5 +82,8 @@ Overall, the purpose of the analysis assignment is to refactor VBA code to help 
           MsgBox "This code ran in" & (endTime - startTime) & "seconds for the year" & (yearValue)
       End Sub
 
+### Refactored Images
+<img width="243" alt="Refactored All Stocks 2017" src="https://github.com/Jall3n/All-Stocks-Analysis/assets/119149740/7c1065ff-4221-496d-a172-b2445291d387">
+
 
 ## Summary
