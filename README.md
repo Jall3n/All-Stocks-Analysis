@@ -156,13 +156,13 @@ For the challenge we needed to update the code to run more efficiently. I also c
         tickerVolumes(tickerIndex) = tickerVolumes(tickerIndex) + Cells(i, 8).Value
         End If
         
-3b) Check if the current row is the first row with the selected tickerIndex.
+3b) Check if the current row is the first row with the selected tickerIndex. Utilizing <> 'doesn't equals to' and And.
 
         If Cells(i - 1, 1).Value <> tickers(tickerIndex) And Cells(i, 1).Value = tickers(tickerIndex) Then
             tickerStartingPrices(tickerIndex) = Cells(i, 6).Value
         End If
         
-3c) Check if the current row is the last row with the selected ticker
+3c) Check if the current row is the last row with the selected ticker.
 
         'If the next row’s ticker doesn’t match, increase the tickerIndex.
         If Cells(i + 1, 1).Value <> tickers(tickerIndex) And Cells(i, 1).Value = tickers(tickerIndex) Then
