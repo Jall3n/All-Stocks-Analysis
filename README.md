@@ -11,7 +11,7 @@ Overall, the purpose of the analysis assignment is to refactor VBA code to help 
 
 ![GreenStocks 2018](https://github.com/Jall3n/All-Stocks-Analysis/assets/119149740/f4184da0-b0a6-40ac-8f62-395ae29068c8) ![GreenStocks 2018 Seconds](https://github.com/Jall3n/All-Stocks-Analysis/assets/119149740/8e6fcf29-8641-4e9b-bc80-5398782ceb6e)
 
-The original/starter code ran for 2017 in 0.2470093 seconds and ran for 2018 in 0.2440186 seconds. One of the differences between the code and the Module 2 activity was activiating both 2017 and 2018 worksheets instead of just 2018. The solution for this came from the challenges starter code, Worksheets(yearValue).Activate, which activates and loops through the two worksheets. A similar update occurred for Range("A1").Value = "All Stocks (2018)" by changing it to "All Stocks (" + yearValue + ")". These two updates would be brought over to the refactored code as well. 
+The original/starter code ran for 2017 in 0.2470093 seconds and ran for 2018 in 0.2440186 seconds. Additionally, 2017 had 11 positive returns but in 2018 we saw only 2 positive returns. One of the differences between the code and the Module 2 activity was activiating both 2017 and 2018 worksheets instead of just 2018. The solution for this came from the challenges starter code, Worksheets(yearValue).Activate, which activates and loops through the two worksheets. A similar update occurred for Range("A1").Value = "All Stocks (2018)" by changing it to "All Stocks (" + yearValue + ")". These two updates would be brought over to the refactored code as well. 
 
 ### Original/Starter Code
 
@@ -147,32 +147,32 @@ For the challenge we needed to update the code to run more efficiently. I also c
 
 2b) Loop over all the rows in the spreadsheet.
 
-        For i = 2 To RowCount
+    For i = 2 To RowCount
         
 3a) Increase volume for current ticker
 
-        If Cells(i, 1).Value = tickers(tickerIndex) Then
-        tickerVolumes(tickerIndex) = tickerVolumes(tickerIndex) + Cells(i, 8).Value
-        End If
+    If Cells(i, 1).Value = tickers(tickerIndex) Then
+    tickerVolumes(tickerIndex) = tickerVolumes(tickerIndex) + Cells(i, 8).Value
+    End If
         
 3b) Check if the current row is the first row with the selected tickerIndex. Utilizing <> 'doesn't equals to' and And.
 
-        If Cells(i - 1, 1).Value <> tickers(tickerIndex) And Cells(i, 1).Value = tickers(tickerIndex) Then
-            tickerStartingPrices(tickerIndex) = Cells(i, 6).Value
-        End If
+    If Cells(i - 1, 1).Value <> tickers(tickerIndex) And Cells(i, 1).Value = tickers(tickerIndex) Then
+    tickerStartingPrices(tickerIndex) = Cells(i, 6).Value
+    End If
         
 3c) Check if the current row is the last row with the selected ticker.
 
-        'If the next row’s ticker doesn’t match, increase the tickerIndex.
-        If Cells(i + 1, 1).Value <> tickers(tickerIndex) And Cells(i, 1).Value = tickers(tickerIndex) Then
-            tickerEndingPrices(tickerIndex) = Cells(i, 6).Value
+    'If the next row’s ticker doesn’t match, increase the tickerIndex.
+    If Cells(i + 1, 1).Value <> tickers(tickerIndex) And Cells(i, 1).Value = tickers(tickerIndex) Then
+    tickerEndingPrices(tickerIndex) = Cells(i, 6).Value
         
 3d) Increasing the tickerIndex.
 
-        tickerIndex = tickerIndex + 1
-        End If
+    tickerIndex = tickerIndex + 1
+    End If
         
-        Next i
+    Next i
       
 4) Loop through your arrays to output the Ticker, Total Daily Volume, and Return.
 
@@ -184,31 +184,27 @@ For the challenge we needed to update the code to run more efficiently. I also c
         
         Next i
 
-          'Formatting; include in first sub
-          Worksheets("All Stocks Analysis").Activate
-          Range("A3:C3").Font.FontStyle = "Bold"
-          Range("A3:C3").Borders(xlEdgeBottom).LineStyle = xlContinuous
-          Range("B4:B15").NumberFormat = "#,##0"
-          Range("C4:C15").NumberFormat = "0.0%"
-          Columns("B").AutoFit
+        Formatting; include in first sub
+        Worksheets("All Stocks Analysis").Activate
+        Range("A3:C3").Font.FontStyle = "Bold"
+        Range("A3:C3").Borders(xlEdgeBottom).LineStyle = xlContinuous
+        Range("B4:B15").NumberFormat = "#,##0"
+        Range("C4:C15").NumberFormat = "0.0%"
+        Columns("B").AutoFit
 
-          dataRowStart = 4
-          dataRowEnd = 15
+        dataRowStart = 4
+        dataRowEnd = 15
 
-          For i = dataRowStart To dataRowEnd
-              If Cells(i, 3) > 0 Then 
-                  Cells(i, 3).Interior.Color = vbGreen
-              Else
-
-                  Cells(i, 3).Interior.Color = vbRed
-              End If
-
-          Next i
-
-          endTime = Timer
-          MsgBox "This code ran in " & (endTime - startTime) & " seconds for the year " & (yearValue)
-
-          End Sub
+        For i = dataRowStart To dataRowEnd
+        If Cells(i, 3) > 0 Then 
+        Cells(i, 3).Interior.Color = vbGreen
+        Else
+        Cells(i, 3).Interior.Color = vbRed
+        End If
+        Next i
+        endTime = Timer
+        MsgBox "This code ran in " & (endTime - startTime) & " seconds for the year " & (yearValue)
+        End Sub
 ### Refactored Image
 The results of the refactored code show that it is faster than the original/starter code which was 0.07421875 seconds for 2017 and 0.0703125 seconds for 2018. 
 
@@ -216,9 +212,13 @@ The results of the refactored code show that it is faster than the original/star
 
 ## Summary
 ### Advantages and Disadvantages of Refactoring Code in General
-It most likely will take longer to refactor the code but the benefit is that it will make the code more efficient and run faster. 
+Some advantages of refactoring code in general is the possibility of making the code more efficient and run faster.
+A disadvantage of refactoring code in general is the larger amount of time it can take. When looking online it seems to be one of the top disadvantages brought up due to size of the code and the time spent testing it. 
 ### Advantages and Disadvantages of Original and Refactored VBA script
-An advantage is that our code ran faster by around 0.17 seconds
+An advantage is that our code ran faster by around 0.17 seconds for both years while a disadvantage is how long it took to get the code to work without running into errors. Most of the time consumption came from spelling and syntax errors as well as properly setting up the new variable called "tickerIndex" and the three output array. 
 
 1) https://www.techtarget.com/searchapparchitecture/definition/refactoring#:~:text=Refactoring%20improves%20code%20readability%20and,to%20a%20program's%20source%20code.
 2) https://en.wikipedia.org/wiki/Code_refactoring
+3) https://www.liquidweb.com/blog/code-refactoring/#h-what-are-the-benefits-of-code-refactoring
+4) https://learn.microsoft.com/en-us/office/vba/language/reference/user-interface-help/data-type-summary
+
