@@ -130,12 +130,12 @@ For the challenge we needed to update the code to run more efficiently. I also c
     'Get the number of rows to loop over
     RowCount = Cells(Rows.Count, "A").End(xlUp).Row
     
-1a) Create a ticker Index, set as zero
+1a) Create a ticker Index, set as zero and set the data type to Integer.
 
     Dim tickerIndex As Integer
     tickerIndex = 0
     
-1b) Create three output arrays; for volume used Long for larger values/bits
+1b) Create three output arrays; for volume used Long for larger values/bits.
 
     Dim tickerVolumes(12) As Long
     Dim tickerStartingPrices(12) As Single
