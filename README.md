@@ -89,7 +89,7 @@ One of the differences between the code and the Module 2 activity was activiatin
 
 ### Refactored Code
 
-For the challenge we needed to update the code to run more efficiently. I also combined all the formating and message box into one code. 
+For the challenge we needed to update the code to run more efficiently. I also combined all the formating and message box into one sub. 
 
     Sub useAllStocksAnalysisRefactored()
     Dim startTime As Single
